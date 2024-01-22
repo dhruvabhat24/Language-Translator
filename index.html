@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Language Translator</h1>
+    </header>
+    <nav>
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+          <path d="M25,1A24,24,0,1,0,49,25,24.027,24.027,0,0,0,25,1Zm0,46A22,22,0,1,1,47,25,22.025,22.025,0,0,1,25,47Z"/>
+          <path d="M25,11a14,14,0,1,0,14,14A14.016,14.016,0,0,0,25,11Zm0,26a12,12,0,1,1,12-12A12.013,12.013,0,0,1,25,37Z"/>
+        </svg>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select id="from-language">
+              <!-- Add options dynamically using JavaScript -->
+            </select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select id="to-language">
+              <!-- Add options dynamically using JavaScript -->
+            </select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button onclick="translateText()">Translate Text</button>
+    </div>
+
+    <script src="js/countries.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
